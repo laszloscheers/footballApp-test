@@ -1,0 +1,227 @@
+/* Outer Container */
+.navbar_wrapper {
+    background: #1c2237;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Navbar Container */
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+
+/* Logo Container */
+.navbar_logo {
+    color: #fff;
+    justify-self: start;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Football Icon */
+.navbar_icon {
+    margin-right: 0.5rem;
+    cursor: default;
+}
+
+
+/* Container for Search Bar and Links - active in mobile mode */
+.nav_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    justify-content: end;
+}
+
+/* Container for each link */
+.link_container {
+    height: 80px;
+    border-bottom: 2px solid transparent;
+}
+
+/* Creates an effect under each link container when hovered over */
+.link_container:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Links */
+.link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Container for the Search bar */
+.searchbar_container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Search bar*/
+.searchbar {
+    height: 2.1rem;
+    width: 300px;
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 35px;
+    outline: none;
+    background: white;
+}
+
+/* Sign Up Button */
+.signup_button {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid white;
+    transition: all 0.3s ease-out;
+    font-size: 1.2rem;
+}
+
+/* Hover effect for the Signup button */
+.signup_button:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+}
+
+/* Open Menu Icon */
+.navbar_toggle_icon2 {
+    color: white;
+}
+
+/* Menu Icon Container */
+.navbar_toggle {
+    display: none;
+}
+
+
+
+
+/* Mobile */
+@media screen and (max-width: 985px) {
+
+    /* Container for Search Bar and Links - active in mobile mode */
+    .nav_section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        justify-content: center;
+    }
+
+    /* Container for Search Bar and Links - active in mobile mode */
+    .nav_section.active {
+        background: #1c2237;
+        left: 0;
+        opacity: 1;
+        transition: all 0.6s ease;
+        z-index: 1;
+    }
+
+    /* Link */
+    .link {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    /* Searchbar container */
+    .searchbar_container {
+        justify-content: center;
+    }
+
+
+    /* Hover effects for links in mobile menu */
+    .link:hover {
+        color: #f00946;
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    /* Hiding border link container when hovered over */
+    .link_container:hover {
+        border: none;
+    }
+
+    /* Container for each Link */
+    .link_container {
+        width: 100%;
+    }
+
+    /* Navbar logo */
+    .navbar_logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+        cursor: pointer;
+    }
+
+    /* Menu Icon Container */
+    .navbar_toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    /* Signup Button Container */
+    .signup_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+    }
+
+    /* Close Menu Icon */
+    .navbar_toggle_icon1 {
+        color: #fff;
+        font-size: 2rem;
+    }
+}
